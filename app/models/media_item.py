@@ -1,10 +1,12 @@
+from enum import Enum as PyEnum
+
 from sqlalchemy import Column, Enum, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import relationship
 
 from . import Base
 
 
-class MediaType(str, Enum):
+class MediaType(str, PyEnum):
     MOVIE = "movie"
     SERIES = "series"
     BOOK = "book"
